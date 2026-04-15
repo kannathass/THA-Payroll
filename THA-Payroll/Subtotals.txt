@@ -1,0 +1,16 @@
+WhilePrintingRecords;
+NumberVar total;
+total := 0
+
+
+formula 2 : tot2
+
+WhilePrintingRecords;
+NumberVar total;
+total := total + {amount};
+
+formula 3 : tot3
+
+WhilePrintingRecords;
+NumberVar total;
+

@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93CA8E25-C592-4581-8E6E-F9D9E70B9C66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>THA_Payroll.My.MyApplication</StartupObject>
+    <RootNamespace>THA_Payroll</RootNamespace>
+    <AssemblyName>THA_Payroll</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>yarn.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>.\</OutputPath>
+    <DocumentationFile>THA_Payroll.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DocumentationFile>THA_Payroll.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Interop.SQLDMO, Version=8.0.0.0, Culture=neutral">
+      <HintPath>..\packages\Interop.SQLDMO.8.0.0.0\lib\Interop.SQLDMO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Neodynamic.WinControls.BarcodeProfessional, Version=4.0.2000.0, Culture=neutral, PublicKeyToken=c6b33c3093a0d4cd, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmMas_Admin.Designer.vb">
+      <DependentUpon>FrmMas_Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmMas_Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmPopAdmin.Designer.vb">
+      <DependentUpon>FrmPopAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmPopAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BioMetric\Frm_BioPop.Designer.vb">
+      <DependentUpon>Frm_BioPop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BioMetric\Frm_BioPop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BioMetric\Frm_Connect_Device.Designer.vb">
+      <DependentUpon>Frm_Connect_Device.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BioMetric\Frm_Connect_Device.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBPayroll_v1DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBPayroll_v1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_BackupData.Designer.vb">
+      <DependentUpon>Frm_BackupData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_BackupData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMas_Category.Designer.vb">
+      <DependentUpon>frmMas_Category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMas_Category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Frm_Category.Designer.vb">
+      <DependentUpon>Frm_Category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Frm_Category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Frm_Deductions.Designer.vb">
+      <DependentUpon>Frm_Deductions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Frm_Deductions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Frm_Dept.Designer.vb">
+      <DependentUpon>Frm_Dept.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Frm_Dept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Check_User_Privilege.vb" />
+    <Compile Include="Module\ClassFilter.vb" />
+    <Compile Include="Module\clsCalendarColumn.vb" />
+    <Compile Include="Module\ClsFormulaExpression.vb" />
+    <Compile Include="Module\clsPayroll.vb" />
+    <Compile Include="Module\clsTime.vb" />
+    <Compile Include="Module\clsValidation.vb" />
+    <Compile Include="Module\ConnectSql.vb" />
+    <Compile Include="Payroll\FrmAllowedDaysEntry.Designer.vb">
+      <DependentUpon>FrmAllowedDaysEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmAllowedDaysEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmEmployeeListing.designer.vb">
+      <DependentUpon>FrmEmployeeListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmEmployeeListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmLeaveEntry.Designer.vb">
+      <DependentUpon>FrmLeaveEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmLeaveEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmMonthlyDeductions.Designer.vb">
+      <DependentUpon>FrmMonthlyDeductions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmMonthlyDeductions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmOverTimeEntry.Designer.vb">
+      <DependentUpon>FrmOverTimeEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmOverTimeEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmPayrollSettings.Designer.vb">
+      <DependentUpon>FrmPayrollSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmPayrollSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmPaySlip.Designer.vb">
+      <DependentUpon>FrmPaySlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmPaySlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmPermissionEntry.Designer.vb">
+      <DependentUpon>FrmPermissionEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmPermissionEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmPopDailyPayrollEmpLOG.Designer.vb">
+      <DependentUpon>FrmPopDailyPayrollEmpLOG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmPopDailyPayrollEmpLOG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmSetShiftTimings.Designer.vb">
+      <DependentUpon>FrmSetShiftTimings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmSetShiftTimings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmDailyPayroll.Designer.vb">
+      <DependentUpon>FrmDailyPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmDailyPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmDailyPayrollListing.Designer.vb">
+      <DependentUpon>FrmDailyPayrollListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmDailyPayrollListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyAllowedDaysEntry.Designer.vb">
+      <DependentUpon>FrmWeeklyAllowedDaysEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyAllowedDaysEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyAttendanceProcess.Designer.vb">
+      <DependentUpon>FrmWeeklyAttendanceProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyAttendanceProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyDeductions.Designer.vb">
+      <DependentUpon>FrmWeeklyDeductions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyDeductions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyPayroll.Designer.vb">
+      <DependentUpon>FrmWeeklyPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmWeeklyPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_Attendance.Designer.vb">
+      <DependentUpon>Frm_Filter_Attendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_Attendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_DailyPayroll.Designer.vb">
+      <DependentUpon>Frm_Filter_DailyPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_DailyPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_Employee.Designer.vb">
+      <DependentUpon>Frm_Filter_Employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_MonthlyPayroll.designer.vb">
+      <DependentUpon>Frm_Filter_MonthlyPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_MonthlyPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_PaySlip.Designer.vb">
+      <DependentUpon>Frm_Filter_PaySlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_PaySlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_WeeklyPayroll.Designer.vb">
+      <DependentUpon>Frm_Filter_WeeklyPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\Frm_Filter_WeeklyPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\frm_LateComers.Designer.vb">
+      <DependentUpon>frm_LateComers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\frm_LateComers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceActual.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceActual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceActualAbsentees.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceActualAbsentees.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceMonthlyConsolidated.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceMonthlyConsolidated.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceMonthlyProcessed.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceMonthlyProcessed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceProcessed.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceProcessed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceProcessedSingleEntries.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceProcessedSingleEntries.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceRunningEmployees.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceRunningEmployees.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AttendanceVerificationReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttendanceVerificationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthlyOTConsolidated.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyOTConsolidated.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthlyOTDetail.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyOTDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthlyPayslip.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyPayslip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthlyPayslipConsolidated.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyPayslipConsolidated.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OTDetail.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OTDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PayslipDeductions.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayslipDeductions.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaySlipEarnings.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaySlipEarnings.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyAbsentees.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyAbsentees.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyPayroll.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyPayroll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeDetails.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeSummary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthlyPayroll.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyPayroll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaySlip.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaySlip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmEmployee.Designer.vb">
+      <DependentUpon>FrmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmMonthlyPayroll.Designer.vb">
+      <DependentUpon>FrmMonthlyPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmMonthlyPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\FrmMonthlyPayrollListing.Designer.vb">
+      <DependentUpon>FrmMonthlyPayrollListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\FrmMonthlyPayrollListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\IniFile.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Payroll\PopEmployeeNames.Designer.vb">
+      <DependentUpon>PopEmployeeNames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\PopEmployeeNames.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPage.Designer.vb">
+      <DependentUpon>ReportPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\WeeklyPayslipConsolidated.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeeklyPayslipConsolidated.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SplTHA.Designer.vb">
+      <DependentUpon>SplTHA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplTHA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TexoMain.Designer.vb">
+      <DependentUpon>TexoMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TexoMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\FrmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmMas_Admin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMas_Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmPopAdmin.resx">
+      <DependentUpon>FrmPopAdmin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BioMetric\Frm_BioPop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_BioPop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BioMetric\Frm_Connect_Device.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Connect_Device.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BackupData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_BackupData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMas_Category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMas_Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Frm_Category.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Category.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Frm_Deductions.resx">
+      <DependentUpon>Frm_Deductions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Frm_Dept.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Dept.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmAllowedDaysEntry.resx">
+      <DependentUpon>FrmAllowedDaysEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmEmployeeListing.resx">
+      <DependentUpon>FrmEmployeeListing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmLeaveEntry.resx">
+      <DependentUpon>FrmLeaveEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmMonthlyDeductions.resx">
+      <DependentUpon>FrmMonthlyDeductions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmOverTimeEntry.resx">
+      <DependentUpon>FrmOverTimeEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmPayrollSettings.resx">
+      <DependentUpon>FrmPayrollSettings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmPaySlip.resx">
+      <DependentUpon>FrmPaySlip.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmPermissionEntry.resx">
+      <DependentUpon>FrmPermissionEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmPopDailyPayrollEmpLOG.resx">
+      <DependentUpon>FrmPopDailyPayrollEmpLOG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmSetShiftTimings.resx">
+      <DependentUpon>FrmSetShiftTimings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmDailyPayroll.resx">
+      <DependentUpon>FrmDailyPayroll.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmDailyPayrollListing.resx">
+      <DependentUpon>FrmDailyPayrollListing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmWeeklyAllowedDaysEntry.resx">
+      <DependentUpon>FrmWeeklyAllowedDaysEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmWeeklyAttendanceProcess.resx">
+      <DependentUpon>FrmWeeklyAttendanceProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmWeeklyDeductions.resx">
+      <DependentUpon>FrmWeeklyDeductions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmWeeklyPayroll.resx">
+      <DependentUpon>FrmWeeklyPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\Frm_Filter_Attendance.resx">
+      <DependentUpon>Frm_Filter_Attendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\Frm_Filter_DailyPayroll.resx">
+      <DependentUpon>Frm_Filter_DailyPayroll.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\Frm_Filter_Employee.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Filter_Employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\Frm_Filter_MonthlyPayroll.resx">
+      <DependentUpon>Frm_Filter_MonthlyPayroll.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\Frm_Filter_PaySlip.resx">
+      <DependentUpon>Frm_Filter_PaySlip.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\Frm_Filter_WeeklyPayroll.resx">
+      <DependentUpon>Frm_Filter_WeeklyPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\frm_LateComers.resx">
+      <DependentUpon>frm_LateComers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceActual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceActual.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceActualAbsentees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceActualAbsentees.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceMonthlyConsolidated.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceMonthlyConsolidated.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceMonthlyProcessed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceMonthlyProcessed.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceProcessed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceProcessed.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceProcessedSingleEntries.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceProcessedSingleEntries.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceRunningEmployees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceRunningEmployees.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AttendanceVerificationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttendanceVerificationReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyOTConsolidated.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyOTConsolidated.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyOTDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyOTDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyPayslip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyPayslip.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyPayslipConsolidated.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyPayslipConsolidated.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OTDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OTDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayslipDeductions.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PayslipDeductions.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySlipEarnings.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PaySlipEarnings.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyAbsentees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyAbsentees.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyPayroll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyPayroll.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeDetails.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeSummary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthlyPayroll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyPayroll.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySlip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PaySlip.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmMonthlyPayroll.resx">
+      <DependentUpon>FrmMonthlyPayroll.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\FrmMonthlyPayrollListing.resx">
+      <DependentUpon>FrmMonthlyPayrollListing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\PopEmployeeNames.resx">
+      <DependentUpon>PopEmployeeNames.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WeeklyPayslipConsolidated.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WeeklyPayslipConsolidated.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplTHA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplTHA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TexoMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TexoMain.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBPayroll_v1DataSet.xsc">
+      <DependentUpon>CBPayroll_v1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CBPayroll_v1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBPayroll_v1DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBPayroll_v1DataSet.xss">
+      <DependentUpon>CBPayroll_v1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dobby.ico" />
+    <None Include="Resources\CottonBlossonPvtLtd.png" />
+    <Content Include="Images\sign.jpg" />
+    <Content Include="yarn.ico" />
+    <None Include="Connection.ini" />
+    <None Include="data.ini" />
+    <None Include="Images\THA_Payroll.jpg" />
+    <None Include="Down.gif" />
+    <None Include="packages.config" />
+    <None Include="Privilege.ini" />
+    <None Include="Up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Axzkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
